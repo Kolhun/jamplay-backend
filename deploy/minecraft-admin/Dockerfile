@@ -15,10 +15,10 @@ RUN --mount=type=ssh,id=default \
 FROM node:20-alpine AS build
 WORKDIR /app
 
-COPY --from=git-clone /repo/apps/admin/package.json /repo/apps/admin/package-lock.json* ./
+COPY --from=git-clone /repo/apps/minecraft-admin/package.json /repo/apps/minecraft-admin/package-lock.json* ./
 RUN npm ci
 
-COPY --from=git-clone /repo/apps/admin/ .
+COPY --from=git-clone /repo/apps/minecraft-admin/ .
 RUN npm run build
 
 FROM nginx:alpine AS runner

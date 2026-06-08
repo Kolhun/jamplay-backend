@@ -13,8 +13,9 @@ Thumbs.db
 /deploy/ssh/*
 !/deploy/ssh/.gitkeep
 !/deploy/ssh/README.md
-/deploy/nginx/secrets/*
-!/deploy/nginx/secrets/.gitkeep
+/deploy/secrets/*
+!/deploy/secrets/.gitkeep
+/deploy/.env
 
 # Logs
 logs
