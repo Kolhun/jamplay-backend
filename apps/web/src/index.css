@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e8e8e8;
+  background-color: #0f1117;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #7eb8ff;
+}
+
+a:hover {
+  color: #a8d0ff;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: #1e2a3a;
+  color: #8ec5ff;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.25rem;
+}
+
+.lead {
+  color: #a0a8b8;
+  margin: 0 0 2rem;
+}
+
+.card {
+  background: #171b24;
+  border: 1px solid #2a3142;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8b95a8;
+}
+
+.debug-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.debug-table td {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #252b3a;
+}
+
+.debug-table td:first-child {
+  color: #8b95a8;
+  width: 40%;
+}
+
+.debug-table tr:last-child td {
+  border-bottom: none;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

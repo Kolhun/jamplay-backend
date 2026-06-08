@@ -1,0 +1,27 @@
+services:
+  nginx:
+    container_name: jamplay-nginx
+    image: jamplay-nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GIT_REPO: ${GIT_REPO}
+        GIT_BRANCH: ${GIT_BRANCH:-main}
+        GIT_ALPINE_VERSION: ${GIT_ALPINE_VERSION:-2.52.0}
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./secrets/htpasswd:/etc/nginx/htpasswd:ro
+    networks:
+      - jamplay-edge
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+networks:
+  jamplay-edge:
+    external: true
